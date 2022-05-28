@@ -1,14 +1,11 @@
 import "./App.css";
 import { Fragment } from "react";
-import GlobalStyles from "./globalStyles";
-import Homepage from "./Homepage";
+import Homepage from "./route/homepage/Homepage";
 
 function App() {
   return (
     <Fragment>
-      <GlobalStyles />
       <div className="App">
-        <h2>This is my eccomerce site</h2>
         <Homepage />
       </div>
     </Fragment>
