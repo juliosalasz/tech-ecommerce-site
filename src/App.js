@@ -1,14 +1,14 @@
 import "./App.css";
-import { Fragment } from "react";
+
 import Homepage from "./route/homepage/Homepage";
+import Navigation from "./route/navigation/Navigation";
 
 function App() {
   return (
-    <Fragment>
-      <div className="App">
-        <Homepage />
-      </div>
-    </Fragment>
+    <div className="App">
+      <Navigation />
+      <Homepage />
+    </div>
   );
 }
 

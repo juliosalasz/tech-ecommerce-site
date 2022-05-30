@@ -1,3 +1,7 @@
+import { Fragment } from "react";
+
+import FeaturedItems from "./featuredItems/FeaturedItems";
+
 import {
   HomepageContainer,
   GridHomepageContainer,
@@ -7,18 +11,21 @@ import Swipper from "../../components/swiperbanner/Swipper";
 
 const Homepage = () => {
   return (
-    <HomepageContainer>
-      <GridHomepageContainer>
-        <HomeHeader>
-          <h2>
-            TECH JUST
-            <br /> FOR YOU
-          </h2>
-          <h3>Because you Deserve it!</h3>
-        </HomeHeader>
-        <Swipper />
-      </GridHomepageContainer>
-    </HomepageContainer>
+    <Fragment>
+      <HomepageContainer>
+        <GridHomepageContainer>
+          <HomeHeader>
+            <h2>
+              TECH JUST
+              <br /> FOR YOU
+            </h2>
+            <h3>Because you Deserve it!</h3>
+          </HomeHeader>
+          <Swipper />
+        </GridHomepageContainer>
+      </HomepageContainer>
+      <FeaturedItems />
+    </Fragment>
   );
 };
 export default Homepage;

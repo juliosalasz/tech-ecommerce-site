@@ -30,16 +30,8 @@ const Swipper = () => {
           }}
           spaceBetween={0}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           className="swiper-pagination-custom"
         >
-          <SwiperSlide>
-            <img src={slide1} alt="slide 1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide2} alt="slide 1" />
-          </SwiperSlide>
           <SwiperSlide>
             <img src={slide1} alt="slide 1" />
           </SwiperSlide>

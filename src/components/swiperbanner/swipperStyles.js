@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
 export const SwiperContainer = styled.div`
+  overflow: hidden;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 `;
 
 export const ColL = styled.div`
-  flex: 0 0 33.33333%;
-  min-width: 33.33333%;
+  grid-column: span 1;
 `;
 
 export const SwiperSize = styled.div`
   display: flex;
-  flex: 0 0 66.66667%;
-  max-width: 66.66667%;
+  grid-column: span 2;
+
   position: relative;
   right: 0;
 `;
