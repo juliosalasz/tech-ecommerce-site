@@ -1,0 +1,36 @@
+.featuredMenuItems {
+  position: relative;
+  color: #00ffa2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.featuredMenuItems:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+.menuItemInfo {
+  margin: 5px auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuItemInfo h2 {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  padding: 5px 20px;
+  margin: 0;
+}
+.menuItemInfo h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  padding: 5px 20px;
+  margin: 0;
+}
+.large {
+  grid-area: 1 / 2 / 3 / 3;
+}
