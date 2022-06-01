@@ -36,3 +36,5 @@ export const FeaturedList = [
     route: "shop/videogames/playstation5",
   },
 ];
+
+export const FeaturedBrands = [{ id: "569", imageUrl: "link", name: "Apple" }];

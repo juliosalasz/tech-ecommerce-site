@@ -1,6 +1,7 @@
 import { FeaturedList } from "../../../utils/featuredList";
 
 import FeaturedMenuItems from "../../../components/featuredMenuItems/FeaturedMenuItems";
+import Marquee from "react-fast-marquee";
 
 import "./featuredItemsStyle.css";
 
@@ -16,6 +17,7 @@ const FeaturedItems = () => {
         </div>
 
         <h2>Brands Marquee</h2>
+        <Marquee></Marquee>
       </div>
     </section>
   );
