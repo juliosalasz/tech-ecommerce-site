@@ -1,7 +1,7 @@
 import { FeaturedList } from "../../../utils/featuredList";
 
 import FeaturedMenuItems from "../../../components/featuredMenuItems/FeaturedMenuItems";
-import Marquee from "react-fast-marquee";
+import MarqueeComponent from "../../../components/marqueeComponent/marqueeComponent";
 
 import "./featuredItemsStyle.css";
 
@@ -10,14 +10,14 @@ const FeaturedItems = () => {
     <section className="featuredSection">
       <div className="featuredContent">
         <h2 className="title">POPULAR PRODUCTS</h2>
-        <div className="featuredList">
-          {FeaturedList.map((item) => (
-            <FeaturedMenuItems key={item.id} item={item} />
-          ))}
+        <div className="featuredWrapper">
+          <div className="featuredList">
+            {FeaturedList.map((item) => (
+              <FeaturedMenuItems key={item.id} item={item} />
+            ))}
+          </div>
+          <MarqueeComponent />
         </div>
-
-        <h2>Brands Marquee</h2>
-        <Marquee></Marquee>
       </div>
     </section>
   );
