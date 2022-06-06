@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 import FeaturedItems from "./featuredItems/FeaturedItems";
+import CategorySection from "./categorySection/categorySection";
 
 import {
   HomepageContainer,
@@ -25,6 +26,7 @@ const Homepage = () => {
         </GridHomepageContainer>
       </HomepageContainer>
       <FeaturedItems />
+      <CategorySection />
     </Fragment>
   );
 };
