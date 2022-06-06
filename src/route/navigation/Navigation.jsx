@@ -26,7 +26,7 @@ const Navigation = () => {
   //Background color for scrolling
   const [navScroll, setNavScroll] = useState(false);
   const colorHandler = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 700) {
       setNavScroll(true);
     } else {
       setNavScroll(false);
