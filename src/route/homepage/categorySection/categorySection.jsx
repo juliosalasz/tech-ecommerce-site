@@ -1,31 +1,43 @@
 const CategorySection = () => {
+  const categories = [
+    { id: "8934", name: "Category 1", popular: true },
+    { id: "0934", name: "Category 2", popular: true },
+    { id: "9934", name: "Category 3", popular: true },
+    { id: "3457", name: "Category 4", popular: false },
+    { id: "2345", name: "Category 5", popular: false },
+    { id: "8799", name: "Category 6", popular: true },
+    { id: "9903", name: "Category 7", popular: true },
+    { id: "3464", name: "Category 8", popular: false },
+  ];
   return (
     <section id="CategorySection">
       <div>
         <div>
           Category List Component
           <div>
-            <ul>
-              <li>Category 1</li>
-              <li>Category 2</li>
-              <li>Category 3</li>
-              <li>Category 4</li>
-              <li>Category 5</li>
-              <li>Category 6</li>
-              <li>Category 7</li>
-            </ul>
+            {categories.map((category) => {
+              return (
+                <div key={category.id}>
+                  <h2>{category.name}</h2>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div>
           Popular Category Display
           <div>
-            <ul>
-              <li>Popular Category 1</li>
-              <li>Popular Category 2</li>
-              <li>Popular Category 3</li>
-              <li>Popular Category 4</li>
-              <li>Popular Category 5</li>
-            </ul>
+            {categories.map((category) => {
+              if (category.popular) {
+                return (
+                  <div key={category.id}>
+                    <h2>{category.name}</h2>
+                  </div>
+                );
+              } else {
+                return;
+              }
+            })}
           </div>
         </div>
       </div>
