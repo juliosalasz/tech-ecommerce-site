@@ -38,3 +38,14 @@ export const FeaturedList = [
 ];
 
 export const FeaturedBrands = [{ id: "569", imageUrl: "link", name: "Apple" }];
+
+export const Categories = [
+  { id: "8934", name: "Laptops", popular: true },
+  { id: "0934", name: "Videogames", popular: true },
+  { id: "9934", name: "Cameras", popular: true },
+  { id: "3457", name: "Smart Phones", popular: false },
+  { id: "2345", name: "Monitors", popular: false },
+  { id: "8799", name: "Gaming Pc", popular: true },
+  { id: "9903", name: "Tablets", popular: true },
+  { id: "3464", name: "Headsets", popular: false },
+];

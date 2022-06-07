@@ -45,7 +45,7 @@ const Navigation = () => {
           <div className="menu">
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <a href="./#">Sign In</a>
+            <Link to="/sign-in">Sign In</Link>
             <a href="./#">Icon</a>
           </div>
           <button
@@ -54,7 +54,7 @@ const Navigation = () => {
           >
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <span></span>
+            <Link to="/sign-in">Sign In</Link>
           </button>
         </div>
       </nav>
