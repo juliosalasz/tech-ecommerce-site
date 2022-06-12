@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 import postRoutes from "./routes/posts.js";
+require("dotenv").config();
 
 //server started
 const app = express();
@@ -19,8 +20,7 @@ app.use("/posts", postRoutes);
 
 // database address
 
-const CONNECTION_URL =
-  "mongodb+srv://Julio:Cuenta1234@cluster0.msi6j.mongodb.net/mernTutorial?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.API_KEY;
 
 // Port of server
 const PORT = process.env.PORT || 5000;
