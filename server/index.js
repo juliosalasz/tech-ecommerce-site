@@ -2,8 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-import postRoutes from "./routes/posts.js";
 require("dotenv").config();
+
+import productRoutes from "./routes/products.js";
 
 //server started
 const app = express();
@@ -15,8 +16,8 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 //start cors
 app.use(cors());
 
-//For using the localhost:5000/posts commands
-app.use("/posts", postRoutes);
+//For using the localhost:5000/product commands
+app.use("/product", productRoutes);
 
 // database address
 
