@@ -28,3 +28,11 @@ provider.setCustomParameters({
 //pass auth and provider to the popup sign in
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+
+//fot getting into firestore
+// export const db = getFirestore();
+
+export const createUserFromAuth = async (userAuth) => {
+  // const userDocRef = doc(db, "users", userAuth.uid);
+  // console.log(userDocRef);
+};

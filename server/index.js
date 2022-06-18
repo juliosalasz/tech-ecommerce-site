@@ -2,22 +2,26 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
-import productRoutes from "./routes/products.js";
+// import productRoutes from "./routes/products.js";
+import userRouter from "./routes/user.js";
 
 //server started
 const app = express();
+app.use(express.json());
 
 //for uploading images and sending post request
 
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-//start cors
+//cors to connect the api to react frontend
 app.use(cors());
 
 //For using the localhost:5000/product commands
-app.use("/product", productRoutes);
+// app.use("/product", productRoutes);
+app.use("/user", userRouter);
 
 // database address
 
