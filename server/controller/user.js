@@ -14,6 +14,8 @@ export const getUser = async (req, res) => {
 export const postUser = async (req, res) => {
   //extract info from reques
   const user = req.body;
+  console.log(user.email);
+  //must check if email in body its already in the data base
   //pass infro through the model
   const newUser = new UserDisplay(user);
   //save into database
