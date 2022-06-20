@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 
 const UserSchema = mongoose.Schema({
-  uid: { type: String, requied: true },
   name: {
     type: String,
-    requied: true,
+    required: true,
   },
   email: {
     type: String,
-    requied: true,
+    required: true,
   },
   createdAt: { type: Date, default: Date.now },
 });

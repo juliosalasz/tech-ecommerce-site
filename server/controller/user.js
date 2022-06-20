@@ -12,15 +12,24 @@ export const getUser = async (req, res) => {
 };
 
 export const postUser = async (req, res) => {
-  //extract info from reques
-  const user = req.body;
-  console.log(user.email);
-  //must check if email in body its already in the data base
-  //pass infro through the model
-  const newUser = new UserDisplay(user);
-  //save into database
-  await newUser.save();
-
-  //send user created
-  res.json(user);
+  try {
+    //extract info from reques
+    const user = req.body;
+    //check if user exists
+    const userCheck = await UserDisplay.findOne({ email: user.email })
+      .select("email")
+      .lean();
+    if (userCheck) {
+      console.log("User already exists");
+    } else {
+      console.log("User Created");
+      //pass infro through the model
+      const newUser = new UserDisplay(user);
+      //save into database
+      await newUser.save();
+    }
+    res.json(user);
+  } catch (error) {
+    console.log("error in user controller.js", error);
+  }
 };

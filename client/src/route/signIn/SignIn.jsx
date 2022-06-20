@@ -1,28 +1,15 @@
 import { signInWithGooglePopup } from "../../utils/firebaseUtil/firebaseUtil";
-import Axios from "axios";
+import { createUserFromAuth } from "../../api/Api";
 
 import "./signIn.css";
+import SignUpForm from "../../components/signUpForm/SignUpForm";
 
 const SignIn = () => {
   const logGoogleUser = async () => {
     //extract user from the sign in auth
     const { user } = await signInWithGooglePopup();
 
-    //function that send the data of google user to the mongo db server
-    //will check if user exist by the server side
-    const createUserFromAuth = async (user) => {
-      try {
-        await Axios.post("http://localhost:5000/user/postUser", {
-          uid: user.uid,
-          name: user.displayName,
-          email: user.email,
-        }).then((Response) => {
-          alert("USER CREATED");
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    };
+    //send user data to server function
     createUserFromAuth(user);
   };
 
@@ -30,6 +17,7 @@ const SignIn = () => {
     <div className="test">
       This is the Sign In page
       <button onClick={logGoogleUser}>Sign In with google</button>
+      <SignUpForm />
     </div>
   );
 };
