@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import { createUserFromAuth } from "../../api/Api";
+import Button from "../button/Button";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebaseUtil/firebaseUtil";
+import FormInput from "../formInput/FormInput";
+import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import "./signUpFormStyles.css";
 
 const defaultFormFields = {
   displayName: "",
@@ -9,10 +14,11 @@ const defaultFormFields = {
   confirmPassword: "",
 };
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
   const [formField, setFormField] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formField;
 
+  //reset inputs after submission
   const resetFormFields = () => {
     setFormField(defaultFormFields);
   };
@@ -33,58 +39,77 @@ const SignUpForm = () => {
         displayName,
         email,
       };
-      await createUserFromAuth(userObject);
       //   await createUserFromAuth(user);
+      await createUserFromAuth(userObject);
       resetFormFields();
     } catch (error) {
       console.log("user creation encountered an error", error);
     }
   };
 
+  //set the form input info into the state
   const changeHandler = (event) => {
     const { name, value } = event.target;
     setFormField({ ...formField, [name]: value });
   };
+  const changeSignHandler = () => {
+    props.onInOrUpHandler();
+  };
 
   return (
-    <div>
-      <h1>Sign up with your Email and Password</h1>
+    <Fragment>
+      <h2>SIGN UP</h2>
+
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Name & LastName</label>
-        <input
+        <FormInput
+          onIcon={faUser}
+          placeholder="Name"
+          label="Name & LastName"
           type="text"
           required
           name="displayName"
           onChange={changeHandler}
           value={displayName}
         />
-        <label htmlFor="">Email</label>
-        <input
+        <FormInput
+          placeholder="Email"
+          onIcon={faEnvelope}
+          label="Email"
           type="email"
           required
           name="email"
           onChange={changeHandler}
           value={email}
         />
-        <label htmlFor="">Password</label>
-        <input
+        <FormInput
+          placeholder="Password"
+          onIcon={faLock}
+          label="Password"
           type="password"
           required
           name="password"
           onChange={changeHandler}
           value={password}
         />
-        <label htmlFor="">Confirm Password</label>
-        <input
+        <FormInput
+          placeholder="Confirm Password"
+          onIcon={faLock}
+          label="Confirm Password"
           type="password"
           required
           name="confirmPassword"
           onChange={changeHandler}
           value={confirmPassword}
         />
-        <button type="submit">Submit</button>
+        <Button type="submit">Submit</Button>
       </form>
-    </div>
+      <div className="signUpLink">
+        Already a member?
+        <button className="btnChange" onClick={changeSignHandler}>
+          Log In
+        </button>
+      </div>
+    </Fragment>
   );
 };
 

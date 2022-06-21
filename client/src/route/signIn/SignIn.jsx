@@ -1,24 +1,25 @@
-import { signInWithGooglePopup } from "../../utils/firebaseUtil/firebaseUtil";
-import { createUserFromAuth } from "../../api/Api";
-
 import "./signIn.css";
+import SignInForm from "../../components/signInForm/SignInForm";
 import SignUpForm from "../../components/signUpForm/SignUpForm";
+import { useState } from "react";
 
 const SignIn = () => {
-  const logGoogleUser = async () => {
-    //extract user from the sign in auth
-    const { user } = await signInWithGooglePopup();
-
-    //send user data to server function
-    createUserFromAuth(user);
+  const [inOrUp, setInOrUp] = useState(true);
+  const inOrUpHandler = () => {
+    setInOrUp(!inOrUp);
   };
-
   return (
-    <div className="test">
-      This is the Sign In page
-      <button onClick={logGoogleUser}>Sign In with google</button>
-      <SignUpForm />
-    </div>
+    <section id="SignIn" className="signBody">
+      <div className="logwrapper">
+        <div className="signInWrapper">
+          {inOrUp ? (
+            <SignInForm onInOrUpHandler={inOrUpHandler} />
+          ) : (
+            <SignUpForm onInOrUpHandler={inOrUpHandler} />
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 
