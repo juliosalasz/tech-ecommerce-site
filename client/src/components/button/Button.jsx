@@ -1,10 +1,12 @@
 import "./buttonStyles.css";
 
+//types for choosing with button you want
 const BUTTON_TYPE_CLASSES = {
   google: "googlebtn",
   signUpLink: "btnChange",
 };
 
+//function will use buttonType as the data for choosing with type of button you want
 const Button = ({ children, buttonType, ...otherProps }) => {
   return (
     <button

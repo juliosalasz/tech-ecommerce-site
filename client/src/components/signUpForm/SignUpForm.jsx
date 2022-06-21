@@ -58,51 +58,53 @@ const SignUpForm = (props) => {
 
   return (
     <Fragment>
-      <h2>SIGN UP</h2>
+      <div className="signUp">
+        <h2>SIGN UP</h2>
+        <form onSubmit={handleSubmit} className="signUpForm">
+          <FormInput
+            onIcon={faUser}
+            placeholder="Name"
+            label="Name & LastName"
+            type="text"
+            required
+            name="displayName"
+            onChange={changeHandler}
+            value={displayName}
+          />
+          <FormInput
+            placeholder="Email"
+            onIcon={faEnvelope}
+            label="Email"
+            type="email"
+            required
+            name="email"
+            onChange={changeHandler}
+            value={email}
+          />
+          <FormInput
+            placeholder="Password"
+            onIcon={faLock}
+            label="Password"
+            type="password"
+            required
+            name="password"
+            onChange={changeHandler}
+            value={password}
+          />
+          <FormInput
+            placeholder="Confirm Password"
+            onIcon={faLock}
+            label="Confirm Password"
+            type="password"
+            required
+            name="confirmPassword"
+            onChange={changeHandler}
+            value={confirmPassword}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          onIcon={faUser}
-          placeholder="Name"
-          label="Name & LastName"
-          type="text"
-          required
-          name="displayName"
-          onChange={changeHandler}
-          value={displayName}
-        />
-        <FormInput
-          placeholder="Email"
-          onIcon={faEnvelope}
-          label="Email"
-          type="email"
-          required
-          name="email"
-          onChange={changeHandler}
-          value={email}
-        />
-        <FormInput
-          placeholder="Password"
-          onIcon={faLock}
-          label="Password"
-          type="password"
-          required
-          name="password"
-          onChange={changeHandler}
-          value={password}
-        />
-        <FormInput
-          placeholder="Confirm Password"
-          onIcon={faLock}
-          label="Confirm Password"
-          type="password"
-          required
-          name="confirmPassword"
-          onChange={changeHandler}
-          value={confirmPassword}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
       <div className="signUpLink">
         Already a member?
         <button className="btnChange" onClick={changeSignHandler}>

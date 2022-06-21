@@ -41,7 +41,7 @@ const Navigation = () => {
     <Fragment>
       <nav className="navBar">
         <div className={`navContainer ${navClass} ${navScrollClass}`}>
-          <h1>Logo</h1>
+          <h1>TECHItOut</h1>
           <div className="menu">
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
