@@ -2,7 +2,7 @@ import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebaseUtil/firebaseUtil";
-import { createUserFromAuth } from "../../api/Api";
+
 import { Fragment, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,9 +31,8 @@ const SignInForm = (props) => {
   //For creating user with google
   const logGoogleUser = async () => {
     //extract user from the sign in auth
-    const { user } = await signInWithGooglePopup();
+    await signInWithGooglePopup();
     //send user data to server function
-    createUserFromAuth(user);
   };
 
   //for sending the data to the log in a new user
@@ -42,11 +41,9 @@ const SignInForm = (props) => {
 
     //send user to server
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await signInAuthUserWithEmailAndPassword(email, password);
+
+      //Will reset the form
       resetFormFields();
     } catch (error) {
       //For types of errors

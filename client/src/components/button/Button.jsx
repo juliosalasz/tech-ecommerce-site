@@ -4,6 +4,7 @@ import "./buttonStyles.css";
 const BUTTON_TYPE_CLASSES = {
   google: "googlebtn",
   signUpLink: "btnChange",
+  cartButton: "cartButton",
 };
 
 //function will use buttonType as the data for choosing with type of button you want

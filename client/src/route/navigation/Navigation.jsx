@@ -1,9 +1,21 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useContext } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
+
+import { UserContext } from "../../context/userContext";
+
+import { SignOutUser } from "../../utils/firebaseUtil/firebaseUtil";
 
 import "./navigationStyle.css";
 
 const Navigation = () => {
+  //userContext
+  const { currentUser } = useContext(UserContext);
+  //sign out function
+  const signOutHandler = async () => {
+    //run sign out from firebase utils
+    await SignOutUser();
+  };
+
   //Responsive Hamburger
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const hamburgerBtnHandler = () => {
@@ -45,7 +57,14 @@ const Navigation = () => {
           <div className="menu">
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <Link to="/sign-in">Sign In</Link>
+            {currentUser ? (
+              <span className="spanMenu" onClick={signOutHandler}>
+                {" "}
+                Sign Out
+              </span>
+            ) : (
+              <Link to="/sign-in">Sign In</Link>
+            )}
             <a href="./#">Icon</a>
           </div>
           <button
@@ -54,7 +73,11 @@ const Navigation = () => {
           >
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <Link to="/sign-in">Sign In</Link>
+            {currentUser ? (
+              <span onClick={signOutHandler}> Sign Out</span>
+            ) : (
+              <Link to="/sign-in">Sign In</Link>
+            )}
           </button>
         </div>
       </nav>

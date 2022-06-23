@@ -53,3 +53,7 @@
 .button-container.btnChange:hover {
   background-color: #311a84;
 }
+.cartButton {
+  background-color: #20dbc2;
+  color: black;
+}

@@ -7,8 +7,6 @@ export const createUserFromAuth = async (user) => {
     await Axios.post("http://localhost:5000/user/postUser", {
       name: user.displayName,
       email: user.email,
-    }).then((Response) => {
-      alert("USER CREATED");
     });
   } catch (err) {
     console.log(err);

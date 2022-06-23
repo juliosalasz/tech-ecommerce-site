@@ -41,6 +41,9 @@ const SignUpForm = (props) => {
       };
       //   await createUserFromAuth(user);
       await createUserFromAuth(userObject);
+
+      //setCurrent user to state
+
       resetFormFields();
     } catch (error) {
       console.log("user creation encountered an error", error);

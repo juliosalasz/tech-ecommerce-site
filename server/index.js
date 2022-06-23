@@ -1,4 +1,6 @@
 import express from "express";
+import multer, { diskStorage } from "multer";
+import path from "path";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -12,7 +14,20 @@ import userRouter from "./routes/user.js";
 const app = express();
 app.use(express.json());
 
-//for uploading images and sending post request
+//multer use
+
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, "images");
+  },
+  filename: (req, file, callback) => {
+    console.log(file);
+    callback(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage: storage });
+//for uploading  sending post request
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -30,8 +45,8 @@ app.use(
   })
 );
 
-//For using the localhost:5000/product commands
-// app.use("/product", productRoutes);
+//For using the localhost:5000/user commands
+// app.use("/user", productRoutes);
 app.use("/user", userRouter);
 
 app.post("/createdUser", async (req, res) => {
@@ -39,6 +54,24 @@ app.post("/createdUser", async (req, res) => {
   console.log(user);
 });
 
+//For using the localhost:5000/product commands
+// app.use("/product", productRoutes);
+
+//For using the localhost:5000/imageupload commands
+// app.use("/imageupload", productRoutes);
+
+app.set("view engine, ejs");
+app.get("/upload", (req, res) => {
+  res.render("upload");
+});
+app.post("/upload", upload.single("image"), (req, res) => {
+  res.send("Image Uploaded");
+});
+
+// app.use(express.static("images"));
+// app.get("/images", (req, res) => {
+//   res.send("images folder");
+// });
 // database address
 
 const CONNECTION_URL = process.env.API_KEY;
