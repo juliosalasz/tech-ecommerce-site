@@ -1,5 +1,5 @@
 import express from "express";
-import multer, { diskStorage } from "multer";
+import multer from "multer";
 import path from "path";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
@@ -45,6 +45,9 @@ app.use(
   })
 );
 
+app.set("view engine", "ejs");
+app.use("/images", express.static("images"));
+
 //For using the localhost:5000/user commands
 // app.use("/user", productRoutes);
 app.use("/user", userRouter);
@@ -54,25 +57,15 @@ app.post("/createdUser", async (req, res) => {
   console.log(user);
 });
 
-//For using the localhost:5000/product commands
-// app.use("/product", productRoutes);
-
 //For using the localhost:5000/imageupload commands
 // app.use("/imageupload", productRoutes);
 
-app.set("view engine, ejs");
 app.get("/upload", (req, res) => {
   res.render("upload");
 });
 app.post("/upload", upload.single("image"), (req, res) => {
   res.send("Image Uploaded");
 });
-
-// app.use(express.static("images"));
-// app.get("/images", (req, res) => {
-//   res.send("images folder");
-// });
-// database address
 
 const CONNECTION_URL = process.env.API_KEY;
 
