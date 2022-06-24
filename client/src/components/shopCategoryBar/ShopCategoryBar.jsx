@@ -1,14 +1,19 @@
+import { Link } from "react-router-dom";
 import "./shopCategoryBar.css";
 
-const ShopCategoryBar = ({ categories }) => {
+const ShopCategoryBar = ({ productCategory }) => {
   return (
     <div className="categoryBarContainer">
       <ul className="categoryBarList">
-        {categories.map((category) => {
+        {productCategory.map((category) => {
           return (
-            <li key={category.id} className="categoryListEntry">
-              <h2>{category.name}</h2>
-            </li>
+            <div key={category.id}>
+              <Link to={`/shop/${category.Category}`}>
+                <li className="categoryListEntry">
+                  <h2>{category.Category}</h2>
+                </li>
+              </Link>
+            </div>
           );
         })}
       </ul>

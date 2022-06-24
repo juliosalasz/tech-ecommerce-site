@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "Category": "LAPTOPS",
     "PRODUCTS": [
       {
@@ -93,6 +94,7 @@
     "POPULAR": true
   },
   {
+    "id": "2",
     "Category": "VIDEOGAMES",
     "PRODUCTS": [
       {
@@ -184,6 +186,7 @@
     "POPULAR": true
   },
   {
+    "id": "3",
     "Category": "CAMERAS",
     "PRODUCTS": [
       {
@@ -275,6 +278,7 @@
     "POPULAR": true
   },
   {
+    "id": "4",
     "Category": "SMART PHONES",
     "PRODUCTS": [
       {
@@ -366,6 +370,7 @@
     "POPULAR": false
   },
   {
+    "id": "5",
     "Category": "MONITORS",
     "PRODUCTS": [
       {
@@ -457,6 +462,7 @@
     "POPULAR": false
   },
   {
+    "id": "6",
     "Category": "GAMING PC",
     "PRODUCTS": [
       {
@@ -548,6 +554,7 @@
     "POPULAR": true
   },
   {
+    "id": "7",
     "Category": "TABLETS",
     "PRODUCTS": [
       {
@@ -639,6 +646,7 @@
     "POPULAR": true
   },
   {
+    "id": "8",
     "Category": "HEADSETS",
     "PRODUCTS": [
       {

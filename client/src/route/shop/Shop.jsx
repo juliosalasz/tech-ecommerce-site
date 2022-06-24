@@ -1,6 +1,6 @@
 import ShopCategoryBar from "../../components/shopCategoryBar/ShopCategoryBar";
 import ShopCategoryDisplay from "../../components/shopCategoryDisplay/ShopCategoryDisplay";
-import { Categories } from "../../utils/featuredList";
+
 import "./shopStyles.css";
 
 import { useContext } from "react";
@@ -14,8 +14,8 @@ const Shop = () => {
       <div className="categoryContainer">
         <h2>CATEGORIES</h2>
         <div className="categoryDisplayContainer">
-          <ShopCategoryBar categories={Categories} />
-          <ShopCategoryDisplay categories={Categories} />
+          <ShopCategoryBar productCategory={products} />
+          <ShopCategoryDisplay productCategory={products} />
         </div>
       </div>
     </section>
