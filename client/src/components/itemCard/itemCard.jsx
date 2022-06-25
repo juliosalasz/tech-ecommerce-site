@@ -1,11 +1,25 @@
 import Button from "../button/Button";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./itemCardStyles.css";
 
-const ItemCard = (props) => {
+const ItemCard = ({ product }) => {
+  const params = useParams();
+
   return (
-    <div id={props.id}>
-      <img src={`http://localhost:5000/${props.imageUrl}`} alt={props.name} />
-      <h3>{props.brand}</h3>
-      <h2>{props.name}</h2>
+    <div key={product.id}>
+      <Link to={`/shop/${params.id}/${product.id}`}>
+        <img
+          src={`http://localhost:5000/${product.imageUrl}`}
+          alt={product.name}
+          className="cardImage"
+        />
+      </Link>
+
+      <h3>{product.brand}</h3>
+      <h2>
+        <Link to={`/shop/${params.id}/${product.id}`}>{product.name}</Link>
+      </h2>
       <Button type="button" buttonType="cartButton">
         Add to Cart
       </Button>

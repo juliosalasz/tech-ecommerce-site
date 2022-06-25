@@ -1,5 +1,7 @@
 import { useState, useEffect, Fragment, useContext } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 import { UserContext } from "../../context/userContext";
 
@@ -65,7 +67,9 @@ const Navigation = () => {
             ) : (
               <Link to="/sign-in">Sign In</Link>
             )}
-            <a href="./#">Icon</a>
+            <a href="./#">
+              <FontAwesomeIcon icon={faShoppingCart} />0
+            </a>
           </div>
           <button
             className={`hamburger ${hamburgerActive ? "isActive" : null}`}

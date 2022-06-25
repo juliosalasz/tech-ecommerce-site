@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import Shop from "../shop/Shop";
+
 import FeaturedItems from "./featuredItems/FeaturedItems";
 import CategorySection from "./categorySection/categorySection";
 
@@ -26,7 +28,7 @@ const Homepage = () => {
         </GridHomepageContainer>
       </HomepageContainer>
       <FeaturedItems />
-      <CategorySection />
+      <Shop />
     </Fragment>
   );
 };

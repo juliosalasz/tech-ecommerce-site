@@ -29,11 +29,8 @@
 .displayInterior {
   color: white;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
-  width: 100%;
-  margin: 10px 10px;
-  border: 2px solid white;
 }
 .displayInterior:hover {
   text-decoration: underline;
@@ -42,4 +39,11 @@
 .displayInterior h2 {
   margin: 0;
   padding: 10px;
+}
+
+.shopCategoryDisplay {
+  display: flex;
+  width: 100%;
+  margin: 10px 10px;
+  border: 2px solid white;
 }

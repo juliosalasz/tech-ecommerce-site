@@ -1,23 +1,40 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../../context/productsContext";
+import ItemCard from "../../components/itemCard/itemCard";
+import ShopCategoryBar from "../../components/shopCategoryBar/ShopCategoryBar";
+
+import {
+  CategoryWrapper,
+  CategoryContainer,
+  CategoryProductDisplay,
+  CategoryDisplay,
+} from "./productCategoryStyles.js";
 
 const ProductCategory = () => {
   const params = useParams();
   const { products } = useContext(ProductContext);
-  console.log(products);
 
-  //   const filtering = products.map();
+  const paramFilter = products.filter(
+    (category) => category.Category === params.id
+  );
 
-  const productInfo = `${products}.${params.id}`;
-  console.log(productInfo);
+  const [id] = paramFilter;
 
-  console.log(params);
   return (
-    <div>
-      <h1>This is the product Category</h1>
-      <h2>{params.id}</h2>
-    </div>
+    <CategoryWrapper id="productCategory">
+      <CategoryDisplay>
+        <ShopCategoryBar productCategory={products} />
+        <CategoryContainer>
+          <h1>{params.id}</h1>
+          <CategoryProductDisplay>
+            {id.PRODUCTS.map((product) => {
+              return <ItemCard key={product.id} product={product} />;
+            })}
+          </CategoryProductDisplay>
+        </CategoryContainer>
+      </CategoryDisplay>
+    </CategoryWrapper>
   );
 };
 
