@@ -13,11 +13,13 @@
   width: 450px;
 }
 .productInfo {
+  display: flex;
+  flex-direction: column;
   margin-left: 30px;
 }
 
 .productTitle {
-  font-size: 5rem;
+  font-size: 2rem;
   margin: 0;
 }
 .productBrand {
@@ -57,12 +59,16 @@
   border-bottom: 1px solid #d6d6d6;
 }
 
+.stockNumber {
+  padding-top: 1rem;
+}
+
 .skuList {
   width: fit-content;
   border: #525252 1px solid;
   padding: 0;
   margin: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 
   display: flex;

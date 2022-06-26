@@ -21,6 +21,7 @@
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .cartModalContainer span {
   font-size: 1.1rem;
@@ -37,13 +38,23 @@
   margin: 0;
 }
 .cartItems {
+  margin: 0;
+  list-style: none;
+  height: 70%;
+  overflow-y: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px 30px;
 }
+.cartItems li:first-child {
+  padding-bottom: unset;
+}
+.cartItems li {
+  padding-bottom: 20px;
+}
 .cartBtn {
-  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 15px;

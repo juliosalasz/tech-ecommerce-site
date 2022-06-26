@@ -5,108 +5,114 @@
     "PRODUCTS": [
       {
         "id": 39746,
-        "name": "product1",
-        "brand": "brand1",
-        "imageUrl": "images/1655964012698.jpg",
+        "name": "Laptop HP 15-ef1009la 15.6\" AMD Ryzen 3 4300U QC SSD 4GB RAM",
+        "brand": "HP",
+        "imageUrl": "images/1656275743406.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "featured": true,
         "featuredImg": "",
         "skus": [
-          { "sku": "SKU1", "price": 59.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
-            "price": 99.9,
+            "sku": "761",
+            "price": 459.9,
             "quantity": 100,
-            "feature": "128 GB"
+            "feature": "256 GB"
           },
           {
-            "sku": "SKU3",
-            "price": 129.9,
+            "sku": "355",
+            "price": 799.9,
+            "quantity": 100,
+            "feature": "500 GB"
+          },
+          {
+            "sku": "706",
+            "price": 1129.9,
             "quantity": 0,
-            "feature": "256 GB"
+            "feature": "1 TB"
           }
         ]
       },
       {
         "id": 27609,
-        "name": "product2",
-        "brand": "brand2",
-        "imageUrl": "images/1655964012698.jpg",
+        "name": "Laptop HP 15-dy2050la 15.6\" Intel Core i3-1115G4 Optane 8GB RAM",
+        "brand": "HP",
+        "imageUrl": "images/1656275887774.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 59.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
-            "price": 99.9,
-            "quantity": 100,
-            "feature": "128 GB"
+            "sku": "642",
+            "price": 559.9,
+            "quantity": 10,
+            "feature": "256 GB"
           },
           {
-            "sku": "SKU3",
-            "price": 129.9,
-            "quantity": 100,
-            "feature": "256 GB"
+            "sku": "763",
+            "price": 799.9,
+            "quantity": 0,
+            "feature": "500 GB"
+          },
+          {
+            "sku": "582",
+            "price": 1329.9,
+            "quantity": 20,
+            "feature": "2 TB"
           }
         ]
       },
       {
         "id": 69989,
-        "name": "product3",
-        "brand": "brand3",
-        "imageUrl": "images/1655964012698.jpg",
+        "name": "Laptop Asus Vivobook Pro 16X OLED N7600PC 16\" Intel Core i7-11370H SSD 16GB RAM",
+        "brand": "ASUS",
+        "imageUrl": "images/1656276204066.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 59.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
-            "price": 99.9,
-            "quantity": 100,
-            "feature": "128 GB"
+            "sku": "766",
+            "price": 2059.9,
+            "quantity": 30,
+            "feature": "512 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          {
+            "sku": "831",
+            "price": 4099.9,
+            "quantity": 3,
+            "feature": "2 TB"
+          }
         ]
       },
       {
         "id": 44265,
-        "name": "product4",
-        "brand": "brand4",
-        "imageUrl": "images/1655964012698.jpg",
+        "name": "Laptop Acer A515-56-76D1 15.6\" Intel Core i7-1165G7 12GB RAM",
+        "brand": "ACER",
+        "imageUrl": "images/1656276368293.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
           {
-            "sku": "SKU1",
-            "price": 199.9,
-            "quantity": 100,
-            "feature": "64 GB"
-          },
-          {
-            "sku": "SKU2",
-            "price": 99.9,
-            "quantity": 100,
-            "feature": "128 GB"
-          },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+            "sku": "550",
+            "price": 1199.9,
+            "quantity": 50,
+            "feature": "512 GB"
+          }
         ]
       },
       {
         "id": 19398,
-        "name": "product5",
-        "brand": "brand5",
-        "imageUrl": "images/1655964012698.jpg",
+        "name": "Laptop Huawei MateBook D14 14\" FHD IPS i3-10110U  SSD 8GB RAM Windows Home",
+        "brand": "HUAWEI",
+        "imageUrl": "images/1656276518694.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 59.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
-            "price": 99.9,
-            "quantity": 100,
-            "feature": "128 GB"
+            "sku": "745",
+            "price": 599.9,
+            "quantity": 50,
+            "feature": "256 GB"
           },
           {
-            "sku": "SKU3",
+            "sku": "293",
             "price": 129.9,
             "quantity": 100,
-            "feature": "256 GB"
+            "feature": "500 GB"
           }
         ]
       }
@@ -124,14 +130,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "340", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "601",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "130", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -141,14 +147,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "580", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "620",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "606", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -158,14 +164,8 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
-          {
-            "sku": "SKU2",
-            "price": 99.9,
-            "quantity": 100,
-            "feature": "128 GB"
-          },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "131", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "193", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -175,14 +175,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "603", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "682",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "369", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -192,14 +192,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "424", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "257",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "779", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       }
     ],
@@ -216,14 +216,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "436", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "645",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "941", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -233,14 +233,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "517", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "270",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "354", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -250,14 +250,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "249", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "779",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "523", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -267,14 +267,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "724", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "619",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "228", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -284,14 +284,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "680", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "142",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "612", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       }
     ],
@@ -308,14 +308,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "674", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "909",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "580", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -325,14 +325,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "803", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "483",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "893", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -342,14 +342,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "722", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "393",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "927", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -359,14 +359,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "886", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "895",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "608", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -376,14 +376,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "595", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "602",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "753", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       }
     ],
@@ -400,14 +400,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "339", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "966",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "734", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -417,14 +417,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "775", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "296",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "192", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -434,14 +434,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "430", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "489",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "414", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -451,14 +451,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "504", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "919",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "908", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       },
       {
@@ -468,14 +468,14 @@
         "imageUrl": "images/1655964012698.jpg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget efficitur augue. Etiam sit amet urna sodales, rutrum nulla sed, semper risus. Phasellus enim nunc, rhoncus quis eleifend a, vehicula in est. ",
         "skus": [
-          { "sku": "SKU1", "price": 99.9, "quantity": 100, "feature": "64 GB" },
+          { "sku": "621", "price": 99.9, "quantity": 100, "feature": "64 GB" },
           {
-            "sku": "SKU2",
+            "sku": "277",
             "price": 99.9,
             "quantity": 100,
             "feature": "128 GB"
           },
-          { "sku": "SKU3", "price": 99.9, "quantity": 100, "feature": "256 GB" }
+          { "sku": "647", "price": 99.9, "quantity": 100, "feature": "256 GB" }
         ]
       }
     ],

@@ -60,18 +60,21 @@ const ProductPage = () => {
           <h2 className="productTitle">{productObject.name.toUpperCase()}</h2>
           <h3 className="productBrand">{productObject.brand.toUpperCase()}</h3>
           <div className="productStockPrice">
-            <h3 className="productPrice">{price}</h3>
+            <h3 className="productPrice">{`$${price}`}</h3>
             <div className="stockContainer">
               {productObject.skus[skuState].quantity !== 0 ? (
                 <p className="stock">IN STOCK</p>
               ) : (
-                <p className="noStock">Out of Stock</p>
+                <p className="noStock">OUT OF STOCK</p>
               )}
             </div>
           </div>
           <div className="productDescription">
             <p>{productObject.description}</p>
           </div>
+          <span className="stockNumber">
+            Stock avaible: {productObject.skus[skuState].quantity}
+          </span>
           <ul className="skuList">
             {productObject.skus.map((sku, i) => {
               return (
@@ -86,14 +89,17 @@ const ProductPage = () => {
               );
             })}
           </ul>
-
-          <Button
-            type="button"
-            buttonType="cartButton"
-            onClick={addProductToCart}
-          >
-            Add to Cart
-          </Button>
+          {productObject.skus[skuState].quantity !== 0 ? (
+            <Button
+              type="button"
+              buttonType="cartButton"
+              onClick={addProductToCart}
+            >
+              Add to Cart
+            </Button>
+          ) : (
+            <Button buttonType="disabled">Add to cart</Button>
+          )}
         </div>
       </div>
     </section>

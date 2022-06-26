@@ -19,6 +19,7 @@ const CartModal = () => {
     reverse: cartIsOpen,
     delay: 200,
   });
+  console.log(cartItems);
   return (
     <div className="cartModalWrapper">
       <div className="cartBackDrop" onClick={closeCart}></div>
@@ -29,17 +30,23 @@ const CartModal = () => {
               <div className="cartTitle">
                 <h1>MY CART</h1>
               </div>
-              <div className="cartItems">
+              <ul className="cartItems">
                 {cartCount === 0 ? (
-                  <p>No Cart Items yet</p>
+                  <li>
+                    <p>No Cart Items yet</p>
+                  </li>
                 ) : (
                   cartItems.map((item) => (
-                    <CartItem key={item.id} cartItem={item} />
+                    <li>
+                      <CartItem key={item.id} cartItem={item} />
+                    </li>
                   ))
                 )}
-              </div>
+              </ul>
               <div className="cartBtn">
-                <Button onClick={closeCart}>Close Cart</Button>
+                <Button buttonType="cartDisplay" onClick={closeCart}>
+                  Close Cart
+                </Button>
               </div>
             </animated.div>
           )

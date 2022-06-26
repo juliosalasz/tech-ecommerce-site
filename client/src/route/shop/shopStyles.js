@@ -17,4 +17,5 @@ export const CategoryContainer = styled.div`
 export const CategoryDisplayContainer = styled.div`
   width: 100%;
   display: flex;
+  height: 70vh;
 `;
