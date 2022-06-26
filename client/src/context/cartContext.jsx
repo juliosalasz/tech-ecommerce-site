@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
 
 //will take current cart Items and the new product and check if already exsists
@@ -30,16 +31,34 @@ export const CartContext = createContext({
   //for adding new items
   cartItems: [],
   addItemToCart: () => {},
+  //for counting Cart
+  cartCount: 0,
 });
 
 export const CartProvider = ({ children }) => {
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const [cartItems, setCartItem] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+
+  //for counting and reducing items items
+  useEffect(() => {
+    const newCartCount = cartItems.reduce(
+      (total, cartItems) => total + cartItems.quantity,
+      0
+    );
+    setCartCount(newCartCount);
+  }, [cartItems]);
 
   const addItemToCart = (productToAdd) => {
     //will add the cartItem from helper funcion to the cart state
     setCartItem(addCartItem(cartItems, productToAdd));
   };
-  const value = { cartIsOpen, setCartIsOpen, addItemToCart, cartItems };
+  const value = {
+    cartIsOpen,
+    setCartIsOpen,
+    addItemToCart,
+    cartItems,
+    cartCount,
+  };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

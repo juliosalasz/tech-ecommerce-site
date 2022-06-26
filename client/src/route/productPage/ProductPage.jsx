@@ -44,6 +44,7 @@ const ProductPage = () => {
     feature: productObject.skus[skuState].feature,
     //price will be the current price in the state
     price: price,
+    image: productObject.imageUrl,
   };
   const addProductToCart = () => addItemToCart(productAdded);
 

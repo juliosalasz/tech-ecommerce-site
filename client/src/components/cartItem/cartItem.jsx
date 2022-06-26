@@ -1,11 +1,15 @@
 import "./cartItemStyles.css";
 
 const CartItem = ({ cartItem }) => {
-  const { name, quantity, feature } = cartItem;
+  const { name, quantity, feature, image } = cartItem;
   return (
-    <div>
-      <h2>{name}</h2>
-      <span>{quantity}</span>/<span>{feature}</span>
+    <div className="cartItemContainer">
+      <img src={`http://localhost:5000/${image}`} alt="" />
+      <div className="cartItemDetails">
+        <h2>{name.toUpperCase()}</h2>
+        <span>Details: {feature}</span>
+        <span>Quantity: {quantity}</span>
+      </div>
     </div>
   );
 };

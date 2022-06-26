@@ -16,11 +16,39 @@
   right: 0;
   width: 30%;
   background-color: white;
+  flex-direction: column;
   height: 100vh;
-  padding: 40px;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+.cartModalContainer span {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.cartTitle {
+  padding: 30px;
+  justify-content: flex-start;
+  border-bottom: 1px solid #e2e2e2;
+}
+.cartTitle h1 {
+  padding: 0;
+  margin: 0;
+}
+.cartItems {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  padding: 10px 30px;
+}
+.cartBtn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  border-top: 1px solid #e2e2e2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }

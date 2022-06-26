@@ -6,14 +6,14 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 import "./cartIconStyles.css";
 const CartIcon = () => {
-  const { setCartIsOpen, cartIsOpen } = useContext(CartContext);
+  const { setCartIsOpen, cartIsOpen, cartCount } = useContext(CartContext);
   const cartToggle = () => {
     setCartIsOpen(!cartIsOpen);
   };
   return (
     <div className="cartIconContainer" onClick={cartToggle}>
       <FontAwesomeIcon icon={faShoppingCart} />
-      <p>0</p>
+      <p>{cartCount}</p>
     </div>
   );
 };

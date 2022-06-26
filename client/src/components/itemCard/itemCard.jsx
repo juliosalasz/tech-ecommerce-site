@@ -20,9 +20,6 @@ const ItemCard = ({ product }) => {
       <h2>
         <Link to={`/shop/${params.id}/${product.id}`}>{product.name}</Link>
       </h2>
-      <Button type="button" buttonType="cartButton">
-        Add to Cart
-      </Button>
     </div>
   );
 };

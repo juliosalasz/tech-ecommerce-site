@@ -6,7 +6,8 @@ import Button from "../button/Button";
 import CartItem from "../cartItem/cartItem";
 
 const CartModal = () => {
-  const { cartIsOpen, setCartIsOpen, cartItems } = useContext(CartContext);
+  const { cartIsOpen, setCartIsOpen, cartItems, cartCount } =
+    useContext(CartContext);
   const closeCart = () => {
     setCartIsOpen(!cartIsOpen);
   };
@@ -25,14 +26,21 @@ const CartModal = () => {
         return (
           item && (
             <animated.div style={props} className="cartModalContainer">
-              <h1>Cart Modal</h1>
-              <div className="cartItems">
-                {cartItems.map((item) => (
-                  <CartItem key={item.id} cartItem={item} />
-                ))}
+              <div className="cartTitle">
+                <h1>MY CART</h1>
               </div>
-
-              <Button onClick={closeCart}>Close Cart</Button>
+              <div className="cartItems">
+                {cartCount === 0 ? (
+                  <p>No Cart Items yet</p>
+                ) : (
+                  cartItems.map((item) => (
+                    <CartItem key={item.id} cartItem={item} />
+                  ))
+                )}
+              </div>
+              <div className="cartBtn">
+                <Button onClick={closeCart}>Close Cart</Button>
+              </div>
             </animated.div>
           )
         );
