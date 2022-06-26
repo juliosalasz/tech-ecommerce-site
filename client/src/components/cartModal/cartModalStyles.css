@@ -1,0 +1,26 @@
+.cartModalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 40;
+}
+.cartBackDrop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cartModalContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  background-color: white;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

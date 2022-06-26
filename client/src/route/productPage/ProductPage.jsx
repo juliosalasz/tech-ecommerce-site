@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Button from "../../components/button/Button";
+import { CartContext } from "../../context/cartContext";
 import { useContext, useState } from "react";
 import { ProductContext } from "../../context/productsContext";
 import "./productPageStyles.css";
@@ -15,35 +16,52 @@ const ProductPage = () => {
   const location = useLocation();
   const categoryName = location.pathname.split("/");
 
+  //find the category of product
   const [categoryPath] = products.filter(
     (category) => category.Category === categoryName[2]
   );
-
-  const [productList] = categoryPath.PRODUCTS.filter(
+  //find the id of product. productObject will be the final result with the product info
+  const [productObject] = categoryPath.PRODUCTS.filter(
     (product) => product.id === Number(categoryName[3])
   );
-  const [price, setPrice] = useState(productList.skus[0].price);
-
+  //Get price of product
+  const [price, setPrice] = useState(productObject.skus[0].price);
+  //Change price of product
   const priceHandler = (i) => {
     setSkuState(i);
-    setPrice(productList.skus[i].price);
+    setPrice(productObject.skus[i].price);
   };
+
+  //for passing item to cart
+  const { addItemToCart } = useContext(CartContext);
+  //create object with the needed info
+  const productAdded = {
+    //id of the sku of the product
+    id: productObject.skus[skuState].sku,
+    //name of product
+    name: productObject.name,
+    //adding feauture to distinguish different skus
+    feature: productObject.skus[skuState].feature,
+    //price will be the current price in the state
+    price: price,
+  };
+  const addProductToCart = () => addItemToCart(productAdded);
 
   return (
     <section className="productPageWrapper">
       <div className="productPageContainer">
         <img
-          src={`http://localhost:5000/${productList.imageUrl}`}
-          alt={productList.name}
+          src={`http://localhost:5000/${productObject.imageUrl}`}
+          alt={productObject.name}
           className="productImage"
         />
         <div className="productInfo">
-          <h2 className="productTitle">{productList.name.toUpperCase()}</h2>
-          <h3 className="productBrand">{productList.brand.toUpperCase()}</h3>
+          <h2 className="productTitle">{productObject.name.toUpperCase()}</h2>
+          <h3 className="productBrand">{productObject.brand.toUpperCase()}</h3>
           <div className="productStockPrice">
             <h3 className="productPrice">{price}</h3>
             <div className="stockContainer">
-              {productList.skus[skuState].quantity !== 0 ? (
+              {productObject.skus[skuState].quantity !== 0 ? (
                 <p className="stock">IN STOCK</p>
               ) : (
                 <p className="noStock">Out of Stock</p>
@@ -51,10 +69,10 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="productDescription">
-            <p>{productList.description}</p>
+            <p>{productObject.description}</p>
           </div>
           <ul className="skuList">
-            {productList.skus.map((sku, i) => {
+            {productObject.skus.map((sku, i) => {
               return (
                 <ListButtonToggle
                   active={skuState === i}
@@ -68,7 +86,11 @@ const ProductPage = () => {
             })}
           </ul>
 
-          <Button type="button" buttonType="cartButton">
+          <Button
+            type="button"
+            buttonType="cartButton"
+            onClick={addProductToCart}
+          >
             Add to Cart
           </Button>
         </div>

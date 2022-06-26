@@ -103,6 +103,16 @@
   justify-content: flex-end;
   margin: 0 -16px;
 }
+.menuList {
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  list-style: none;
+  display: flex;
+}
+.menuList li {
+  margin: 0 16px;
+}
 .spanMenu {
   margin: 0 16px;
   font-weight: 600;
@@ -114,7 +124,6 @@
 }
 
 .menu a {
-  margin: 0 16px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.4s;

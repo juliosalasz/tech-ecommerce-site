@@ -1,11 +1,8 @@
 import { useState, useEffect, Fragment, useContext } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-
 import { UserContext } from "../../context/userContext";
-
 import { SignOutUser } from "../../utils/firebaseUtil/firebaseUtil";
+import CartIcon from "../../components/cartIcon/cartIcon";
 
 import "./navigationStyle.css";
 
@@ -57,19 +54,26 @@ const Navigation = () => {
         <div className={`navContainer ${navClass} ${navScrollClass}`}>
           <h1>TECHItOut</h1>
           <div className="menu">
-            <Link to="/">Home</Link>
-            <Link to="/shop">Shop</Link>
-            {currentUser ? (
-              <span className="spanMenu" onClick={signOutHandler}>
-                {" "}
-                Sign Out
-              </span>
-            ) : (
-              <Link to="/sign-in">Sign In</Link>
-            )}
-            <a href="./#">
-              <FontAwesomeIcon icon={faShoppingCart} />0
-            </a>
+            <ul className="menuList">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/shop">Shop</Link>
+              </li>
+              <li>
+                {currentUser ? (
+                  <span className="spanMenu" onClick={signOutHandler}>
+                    Sign Out
+                  </span>
+                ) : (
+                  <Link to="/sign-in">Sign In</Link>
+                )}
+              </li>
+              <li>
+                <CartIcon />
+              </li>
+            </ul>
           </div>
           <button
             className={`hamburger ${hamburgerActive ? "isActive" : null}`}
@@ -85,6 +89,7 @@ const Navigation = () => {
           </button>
         </div>
       </nav>
+
       <Outlet />
     </Fragment>
   );
