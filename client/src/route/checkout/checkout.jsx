@@ -8,6 +8,10 @@ const CheckOut = () => {
 
   setComingFromCheckout(false);
 
+  //for  rounding up the number
+
+  const roundNumber = () => Math.round(cartTotal);
+
   return (
     <section className="checkOutContainer">
       <h2>CHECKOUT</h2>
@@ -38,7 +42,9 @@ const CheckOut = () => {
         )}
       </div>
 
-      <span className="totalCheckout">TOTAL: ${cartTotal}</span>
+      <span className="totalCheckout">
+        TOTAL: ${Math.round(cartTotal * 100) / 100}
+      </span>
     </section>
   );
 };

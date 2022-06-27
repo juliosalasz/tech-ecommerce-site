@@ -12,6 +12,7 @@
 /build
 
 # misc
+.views/upload.ejs
 .DS_Store
 .env
 .env.local
