@@ -11,7 +11,7 @@ export const FeaturedList = [
     name: "GEFORCE GTX 1080",
     imageUrl: "https://i.ibb.co/GR6j0Lg/graphic-Card.jpg",
     price: "$300",
-    route: "shop/videogames/playstation5",
+    route: "shop/VIDEOGAMES/951055",
   },
   {
     id: "789",

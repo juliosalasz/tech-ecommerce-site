@@ -12,3 +12,15 @@ export const createUserFromAuth = async (user) => {
     console.log(err);
   }
 };
+
+export const getUsers = async () => {
+  try {
+    const productServer = await Axios.get(
+      "http://localhost:5000/products/getProducts"
+    ).then((res) => res.data);
+
+    return productServer;
+  } catch (err) {
+    console.log(err);
+  }
+};

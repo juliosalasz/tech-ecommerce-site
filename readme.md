@@ -63,6 +63,10 @@ Site must post orders into the database for both the user and admin to view.
 Fully responive site with appearing animations when loading.
 </br>
 
+## Improvements
+
+Product must have a default display if its only the only sku
+
 ## EXTRA LIBRARIES USED
 
 REACT ROUTER v6

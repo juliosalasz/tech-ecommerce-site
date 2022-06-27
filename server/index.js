@@ -9,6 +9,7 @@ dotenv.config();
 
 // import routes
 import userRouter from "./routes/user.js";
+import productRouter from "./routes/products.js";
 
 //server started
 const app = express();
@@ -66,6 +67,10 @@ app.get("/upload", (req, res) => {
 app.post("/upload", upload.single("image"), (req, res) => {
   res.send("Image Uploaded");
 });
+
+//for getting products
+
+app.use("/products", productRouter);
 
 const CONNECTION_URL = process.env.API_KEY;
 
