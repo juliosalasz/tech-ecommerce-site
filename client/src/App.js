@@ -15,10 +15,11 @@ import ProductCategory from "./route/productCategory/ProductCategory.jsx";
 import ProductPage from "./route/productPage/ProductPage";
 import CheckOut from "./route/checkout/checkout";
 import CartModal from "./components/cartModal/CartModal";
+import Shipping from "./route/shipping/shipping";
 
 function App() {
   const { cartIsOpen } = useContext(CartContext);
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, goingToAdress } = useContext(UserContext);
   return (
     <Fragment>
       {cartIsOpen && <CartModal />}
@@ -32,6 +33,9 @@ function App() {
           {currentUser ? (
             <Route path="/checkout" element={<CheckOut />} />
           ) : null}
+          {goingToAdress ? null : (
+            <Route path="/shipping" element={<Shipping />} />
+          )}
         </Route>
       </Routes>
     </Fragment>

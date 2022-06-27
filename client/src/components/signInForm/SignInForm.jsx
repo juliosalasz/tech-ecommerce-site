@@ -51,6 +51,7 @@ const SignInForm = (props) => {
     await signInWithGooglePopup();
     //send user data to server function
     isComingfromCheckout();
+    console.log(comingFromCheckout);
   };
 
   //for sending the data to the log in a new user

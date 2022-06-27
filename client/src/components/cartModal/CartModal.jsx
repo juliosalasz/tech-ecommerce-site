@@ -17,6 +17,7 @@ const CartModal = () => {
     setCartIsOpen,
     cartItems,
     cartCount,
+    comingFromCheckout,
     setComingFromCheckout,
   } = useContext(CartContext);
   const closeCart = () => {
@@ -31,6 +32,7 @@ const CartModal = () => {
       //take me to sign in and set state to know that you are coming from checkout
       navigate("/sign-in");
       setComingFromCheckout(true);
+      console.log(comingFromCheckout);
     }
     //and close the modal
     setCartIsOpen(!cartIsOpen);
@@ -60,8 +62,8 @@ const CartModal = () => {
                   </li>
                 ) : (
                   cartItems.map((item) => (
-                    <li>
-                      <CartItem key={item.id} cartItem={item} />
+                    <li key={item.id}>
+                      <CartItem cartItem={item} />
                     </li>
                   ))
                 )}

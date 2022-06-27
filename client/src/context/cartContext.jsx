@@ -61,6 +61,8 @@ export const CartContext = createContext({
   cartCount: 0,
   setComingFromCheckout: () => {},
   comingFromCheckout: false,
+  setGoingToAdress: () => {},
+  goingToAdress: false,
   cartTotal: 0,
 });
 
@@ -69,6 +71,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItem] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [comingFromCheckout, setComingFromCheckout] = useState(false);
+  const [goingToAdress, setGoingToAdress] = useState(false);
   const [cartTotal, setCartTotal] = useState(0);
 
   //for counting and reducing items items
@@ -110,6 +113,8 @@ export const CartProvider = ({ children }) => {
     cartCount,
     comingFromCheckout,
     setComingFromCheckout,
+    goingToAdress,
+    setGoingToAdress,
     cartTotal,
   };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

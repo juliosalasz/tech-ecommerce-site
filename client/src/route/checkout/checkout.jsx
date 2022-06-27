@@ -1,16 +1,34 @@
 import { CartContext } from "../../context/cartContext";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import Button from "../../components/button/Button";
 import CheckoutItem from "../../components/checkOutItem/checkOutItem";
 import "./checkoutStyles.css";
+import { useEffect } from "react";
+
 const CheckOut = () => {
-  const { cartItems, cartCount, setComingFromCheckout, cartTotal } =
-    useContext(CartContext);
+  const {
+    cartItems,
+    cartCount,
+    setComingFromCheckout,
+    cartTotal,
+    setGoingToAdress,
+  } = useContext(CartContext);
 
-  setComingFromCheckout(false);
+  useEffect(() => {
+    setComingFromCheckout(false);
+    setGoingToAdress(true);
+  }, [setComingFromCheckout, setGoingToAdress]);
 
-  //for  rounding up the number
+  //we can put a state here that opens up the shipping adress. State must be in cartcontext
 
-  const roundNumber = () => Math.round(cartTotal);
+  //place if route on app.js (Done)
+  //place button below total to send me in ()
+  //we can set it off in the shipping
+  const navigate = useNavigate();
+  const shippingLinkHandler = () => {
+    navigate("/shipping");
+  };
 
   return (
     <section className="checkOutContainer">
@@ -45,10 +63,9 @@ const CheckOut = () => {
       <span className="totalCheckout">
         TOTAL: ${Math.round(cartTotal * 100) / 100}
       </span>
+      <Button onClick={shippingLinkHandler}>Continue To Payment</Button>
     </section>
   );
 };
 
 export default CheckOut;
-
-/*       <div className="checkoutHeader"></div> */
