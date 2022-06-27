@@ -3,8 +3,10 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebaseUtil/firebaseUtil";
 
-import { Fragment, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+import { Fragment, useState, useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -20,12 +22,27 @@ const defaultFormFields = {
 };
 
 const SignInForm = (props) => {
+  //Cart context to know if coming from checkout
+  const { cartItems, comingFromCheckout } = useContext(CartContext);
+
+  //
   const [formField, setFormField] = useState(defaultFormFields);
   const { email, password } = formField;
+
+  const navigate = useNavigate();
 
   //reset inputs after submission
   const resetFormFields = () => {
     setFormField(defaultFormFields);
+  };
+
+  //for checking if user comes from chekout
+  const isComingfromCheckout = () => {
+    if (comingFromCheckout && cartItems) {
+      navigate("/checkout");
+    } else {
+      navigate(-1);
+    }
   };
 
   //For creating user with google
@@ -33,6 +50,7 @@ const SignInForm = (props) => {
     //extract user from the sign in auth
     await signInWithGooglePopup();
     //send user data to server function
+    isComingfromCheckout();
   };
 
   //for sending the data to the log in a new user
@@ -45,6 +63,7 @@ const SignInForm = (props) => {
 
       //Will reset the form
       resetFormFields();
+      isComingfromCheckout();
     } catch (error) {
       //For types of errors
       switch (error.code) {

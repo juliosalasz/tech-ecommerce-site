@@ -69,3 +69,8 @@
 .button-container.disabled {
   background-color: #adadad;
 }
+
+.button-container.disabledCart {
+  width: 100%;
+  background-color: #adadad;
+}

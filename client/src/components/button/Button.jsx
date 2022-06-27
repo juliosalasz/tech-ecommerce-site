@@ -7,6 +7,7 @@ const BUTTON_TYPE_CLASSES = {
   cartButton: "cartButton",
   cartDisplay: "cartDisplay",
   disabled: "disabled",
+  disabledCart: "disabledCart",
 };
 
 //function will use buttonType as the data for choosing with type of button you want
