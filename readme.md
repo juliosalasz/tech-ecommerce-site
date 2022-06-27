@@ -63,8 +63,6 @@ Site must post orders into the database for both the user and admin to view.
 Fully responive site with appearing animations when loading.
 </br>
 
-## Improvements
-
 ## EXTRA LIBRARIES USED
 
 REACT ROUTER v6
